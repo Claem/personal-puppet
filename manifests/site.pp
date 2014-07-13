@@ -8,7 +8,7 @@ Exec {
 node default {
   include 'common'
   #Broken until I figure out submodules
-  #include 'users::users::jippen'
+  include 'users::users::claem'
   include 'puppet'
   include 'tools'
 }
