@@ -4,9 +4,6 @@ class common {
 
 file { '~/.vim-tmp':
   ensure => directory,
-  owner  => root,
-  group  => root,
-  mode   => 644,
   }
 
 }
