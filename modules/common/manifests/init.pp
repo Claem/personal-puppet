@@ -9,4 +9,11 @@ file { '~/.vim-tmp':
   mode   => 644,
   }
 
+file { '~/.vim-tmp':
+  ensure => directory,
+  owner  => root,
+  group  => root,
+  mode   => 644,
+  }
+
 }
