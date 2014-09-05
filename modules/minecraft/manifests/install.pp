@@ -4,7 +4,7 @@ package { 'screen':
     ensure  => installed,
   }
 
-package { 'default-jdk':
+package { 'default-jre':
     ensure => installed 
 }
 
