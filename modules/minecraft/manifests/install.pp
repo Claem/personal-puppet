@@ -1,10 +1,10 @@
 class minecraft::install { 
 
-package { screen
+package { 'screen':
     ensure  => installed,
   }
 
-package { default-jdk,
+package { 'default-jdk':
     ensure => installed 
 }
 
