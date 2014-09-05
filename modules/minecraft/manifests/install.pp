@@ -35,3 +35,5 @@ file {  '/home/minecraft/minecraft/plugins':
     mode    => '0711',
     source  => "puppet:///modules/minecraft/home/minecraft/minecraft/bukkit.yml",
   }
+
+}
