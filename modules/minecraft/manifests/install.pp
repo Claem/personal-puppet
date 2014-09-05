@@ -1,11 +1,11 @@
 class minecraft::install { 
 
 package { 'screen':
-    ensure  => installed,
+    ensure  => present,
   }
 
 package { 'default-jre':
-    ensure => installed 
+    ensure => installed, 
 }
 
 user { 'minecraft':    
