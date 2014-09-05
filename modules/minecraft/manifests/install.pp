@@ -6,6 +6,7 @@ package { screen
 
 package { default-jdk,
     ensure => installed 
+}
 
 user { 'minecraft':    
     ensure  => present,
