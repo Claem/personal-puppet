@@ -13,10 +13,6 @@ node default {
   include 'tools'
 }
 
-node /^tvmobili.*/ inherits default {
-  include 'tvmobili'
-}
-
 node 'NFS' inherits default {
   #include 'nginx'
   #include 'icinga'
