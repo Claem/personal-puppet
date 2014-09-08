@@ -15,4 +15,4 @@ class users::users::claem{
     group   => 'claem',
     require => User_acct['claem'],
   }
-
+}
