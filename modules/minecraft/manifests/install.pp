@@ -1,9 +1,5 @@
 class minecraft::install { 
 
-package { 'screen':
-    ensure  => present,
-  }
-
 package { 'default-jre':
     ensure => installed, 
 }
