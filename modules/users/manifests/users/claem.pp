@@ -3,7 +3,7 @@ class users::users::claem{
 
   #My non-root account I use everywhere
   user_acct {'claem':
-    fullname    => "Claem Agourd",
+    fullname    => "claem",
     uid         => 1000,
     recursehome => true,
   }
@@ -15,4 +15,11 @@ class users::users::claem{
     group   => 'claem',
     require => User_acct['claem'],
   }
+  
+  exec { "bash -x /home/claem/.homedir/setup.sh":
+    cwd    => '/home/claem/.homedir'
+    user   => 'claem'
+    group  => 'claem'
+  }
 }
+
