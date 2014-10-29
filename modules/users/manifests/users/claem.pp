@@ -17,9 +17,9 @@ class users::users::claem{
   }
   
   exec { "bash -x /home/claem/.homedir/setup.sh":
-    cwd    => '/home/claem/.homedir'
-    user   => 'claem'
-    group  => 'claem'
+    cwd    => '/home/claem/.homedir',
+    user   => 'claem',
+    group  => 'claem',
   }
 }
 
