@@ -20,7 +20,7 @@ node 'NFS' inherits default {
 }
 
 
-node 'barghest' inherits default {
-  include 'minecraft'
-}
+#node 'barghest' inherits default {
+#  include 'minecraft'
+#}
 
