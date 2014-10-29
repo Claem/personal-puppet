@@ -4,7 +4,7 @@ class users::users::claem{
   #My non-root account I use everywhere
   user_acct {'claem':
     fullname    => "claem",
-    uid         => 1000,
+    uid         => "claem",
     recursehome => true,
   }
 
