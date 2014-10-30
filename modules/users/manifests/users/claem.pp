@@ -1,10 +1,9 @@
-class users::users::claem{
+class users::users::claem {
   include 'users::util'
 
   #My non-root account I use everywhere
   user_acct {'claem':
-    fullname    => "claem",
-    uid         => 'claem',
+    fullname    => 'claem',
     recursehome => true,
   }
 
@@ -20,6 +19,7 @@ class users::users::claem{
     cwd    => '/home/claem/.homedir',
     user   => 'claem',
     group  => 'claem',
+    require => User_acct['claem'],
   }
 }
 

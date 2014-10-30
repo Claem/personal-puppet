@@ -18,7 +18,7 @@ define user_acct($fullname, $uid, $groups=[], $recursehome=false){
     ensure       => directory,
     mode         => 0640,
     owner        => $name,
-    group        => $group,
+    group        => $name,
     require      => User[$name],
     recurse      => $recursehome,
     recurselimit => 3,
