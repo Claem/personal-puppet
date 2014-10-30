@@ -17,7 +17,7 @@ class users::users::claem {
   }
  
  exec { 'git clone https://github.com/Claem/.homedir.git': 
-     creates => "/home/claem/.homedir',
+     creates => '/home/claem/.homedir',
      owner   => 'claem',
      group   => 'claem',
      require => 'User_acct['claem'],
