@@ -15,12 +15,19 @@ class users::users::claem {
     group   => 'claem',
     require => User_acct['claem'],
   }
-  
-  exec { "bash -x /home/claem/.homedir/setup.sh":
-    cwd    => '/home/claem/.homedir',
-    user   => 'claem',
-    group  => 'claem',
-    require => User_acct['claem'],
+ 
+ exec { 'git clone https://github.com/Claem/.homedir.git': 
+     creates => "/home/claem/.homedir',
+     owner   => 'claem',
+     group   => 'claem',
+     require => 'User_acct['claem'],
+   }
+
+  exec { '/home/claem/.homedir/setup.sh':
+    cwd     => '/home/claem/.homedir',
+    user    => 'claem',
+    group   => 'claem',
+    require => Exec['git clone https://github.com/Claem/.homedir.git'],
   }
 }
 
