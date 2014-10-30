@@ -20,7 +20,7 @@ class users::users::claem {
      creates => '/home/claem/.homedir',
      owner   => 'claem',
      group   => 'claem',
-     require => 'User_acct['claem'],
+     require => User_acct['claem'],
    }
 
   exec { '/home/claem/.homedir/setup.sh':
