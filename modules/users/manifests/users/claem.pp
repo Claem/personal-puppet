@@ -16,7 +16,7 @@ class users::users::claem {
     require => User_acct['claem'],
   }
  
- exec { "git clone https://github.com/Claem/.homedir.git ${root_path": 
+ exec { "git clone https://github.com/Claem/.homedir.git ${root_path}": 
      environment => 'HOME=${home_path}',
      creates     => '/home/claem/.homedir',
      user        => 'claem',
