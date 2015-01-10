@@ -29,7 +29,7 @@ class users::users::claem {
     cwd         => '/home/claem/.homedir',
     user        => 'claem',
     group       => 'claem',
-    require     => Exec {"git clone https://github.com/Claem/.homedir.git ${root_path}"}',
+    require     => Exec ["git clone https://github.com/Claem/.homedir.git ${root_path}"]',
   }
 }
 
