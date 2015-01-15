@@ -16,20 +16,22 @@ class users::users::claem {
     require => User_acct['claem'],
   }
  
- exec { "git clone https://github.com/Claem/.homedir.git ${root_path}": 
-     environment => 'HOME=${home_path}',
-     creates     => '/home/claem/.homedir',
-     user        => 'claem',
-     group       => 'claem',
-     require     => User_acct['claem'],
-   }
+  vcsrepo  { "/home/claem/.homedir" :
+    ensure   => present,
+    provider => git,
+    source   => "https://github.com/Claem/.homedir.git",
+    user     => 'claem',
+    group    => 'claem',
+    require  => User_acct['claem'],
+  }
+ 
 
   exec { "/home/claem/.homedir/setup.sh ${root_path}":
     environment => 'HOME=${home_path}',
     cwd         => '/home/claem/.homedir',
     user        => 'claem',
     group       => 'claem',
-    require     => Exec ["git clone https://github.com/Claem/.homedir.git ${root_path}"],
+    require     => Vcsrepo['/home/claem/.homedir'],
   }
 }
 
