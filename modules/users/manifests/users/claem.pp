@@ -21,7 +21,6 @@ class users::users::claem {
     provider => git,
     source   => "https://github.com/Claem/.homedir.git",
     user     => 'claem',
-    group    => 'claem',
     require  => User_acct['claem'],
   }
  
