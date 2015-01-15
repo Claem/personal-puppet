@@ -14,14 +14,15 @@ class users::users::claem {
     owner   => 'claem',
     group   => 'claem',
     require => User_acct['claem'],
+    before  => Vcsrepo['/home/claem/.homedir'],
   }
+
  
   vcsrepo  { "/home/claem/.homedir" :
     ensure   => present,
     provider => git,
     source   => "https://github.com/Claem/.homedir.git",
     user     => 'claem',
-    require  => User_acct['claem'],
   }
  
 
