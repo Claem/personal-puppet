@@ -26,7 +26,7 @@ class users::users::claem {
   }
  
 
-  exec { "/home/claem/.homedir/setup.sh ${root_path}":
+  exec { "/bin/bash /home/claem/.homedir/setup.sh ${root_path}":
     environment => 'HOME=${home_path}',
     cwd         => '/home/claem/.homedir',
     user        => 'claem',
