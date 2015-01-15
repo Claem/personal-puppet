@@ -19,10 +19,11 @@ class users::users::claem {
 
  
   vcsrepo  { "/home/claem/.homedir" :
-    ensure   => present,
+    ensure   => latest,
     provider => git,
     source   => "https://github.com/Claem/.homedir.git",
     user     => 'claem',
+    revision => 'master',
   }
  
 
