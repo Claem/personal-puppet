@@ -17,7 +17,7 @@ node default {
   #include 'icinga'
   #include 'virtualbox'
   #include 'phpvirtualbox'
-}
+#}
 
 
 #node 'barghest' inherits default {
