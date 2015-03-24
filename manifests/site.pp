@@ -12,7 +12,7 @@ node default {
   include 'tools'
 }
 
-node 'NFS' inherits default {
+#node 'NFS' inherits default {
   #include 'nginx'
   #include 'icinga'
   #include 'virtualbox'
